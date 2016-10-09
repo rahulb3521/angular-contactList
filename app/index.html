@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html ng-app>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Contact List App</title>
-	<link rel="stylesheet" href="">
-	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact List App</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="controllers/mainController.js"></script>
 </head>
+
 <body>
-	<h1>Contact List App</h1>
-	<input type="text" ng-model="test">
-	
-	<div>{{test}}</div>
-	
+    <div class="wrapper" ng-controller="AppController">
+        <div class="header">
+            <h1>Contact List App</h1>
+        </div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div> 
 </body>
 </html>
