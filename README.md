@@ -5,7 +5,7 @@ Create Updating Delete Contacts
  * NPM
  * Node
  * Bower
- 
+
 ##Getting Started
  * Create a github account
  * Run the following commands : 
@@ -18,6 +18,7 @@ Create Updating Delete Contacts
     ```
  * Create a "ContactList" database with the collection : "contacts"
  * Insert test documents where one document is a object e.g. :-
+ 
    ```bash
  	- var obj = {
  	    "name" : "",
