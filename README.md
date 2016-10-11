@@ -17,8 +17,8 @@ Create Updating Delete Contacts
     bower install (inside app folder since these are client side packages)
     ```
  * Create a "ContactList" database with the collection : "contacts"
- * Insert test documents where one document is a object e.g. :-
- 
+ * Insert test documents where one document is an object e.g. :-
+
    ```bash
  	- var obj = {
  	    "name" : "",
