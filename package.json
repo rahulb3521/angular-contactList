@@ -2,7 +2,9 @@
   "name": "angular-contactList",
   "version": "1.0.0",
   "dependencies": {
-    "express": "4.14.0"
+    "express": "4.14.0",
+    "mongodb" : "2.2",
+    "body-parser" : "1.15.2"
   },
   "description": "Create Updating Delete Contacts",
   "main": "server.js",

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contact List App</title>
+    <link rel="icon" type="img/ico" href="images/contacts.png">
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -25,8 +26,30 @@
                         <th>Number</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" ng-model="contact.name">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" ng-model="contact.email">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" ng-model="contact.number">
+                        </td>
+                        <td>
+                            <button ng-click="addContact()" class="btn btn-primary">Add Contact</button>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="contact in contactlist">
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.number}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
-    </div> 
+    </div>
 </body>
+
 </html>
