@@ -1,19 +1,42 @@
 function AppController($scope, $http) {
 
-    $http.get('/contactList').success(function(data) {
-    	console.log(data);
-        $scope.contactlist = data;
-    });
+    var refresh = function() {
+        $http.get('/contactList').success(function(data) {
+            console.log(data);
+            $scope.contactlist = data;
+            $scope.contact = '';
+        });
+
+    };
+
+    refresh();
 
     $scope.addContact = function() {
-    	console.log($http);
-        console.log($scope.contact);
         var contact = $scope.contact;
         $http.post('/contact', contact)
-            .then(
+            .success(
                 function(response) {
                     console.log(response);
                     console.log('Contact added successfully');
+                    refresh();
+                },
+                function(response) {
+                    console.log('ERROR');
+                }
+            );
+
+    };
+    //remove
+    $scope.removeContact = function(id) {
+        console.log(id);
+
+        var contact = $scope.contact;
+        $http.delete('/contact/' + id)
+            .success(
+                function(response) {
+                    console.log(response);
+                    console.log('Contact deleted successfully');
+                    refresh();
                 },
                 function(response) {
                     console.log('ERROR');

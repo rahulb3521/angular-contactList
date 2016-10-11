@@ -42,9 +42,13 @@
                         </td>
                     </tr>
                     <tr ng-repeat="contact in contactlist">
+                        <td class="hidden" data-id="{{contact._id}}"></td>
                         <td>{{contact.name}}</td>
                         <td>{{contact.email}}</td>
                         <td>{{contact.number}}</td>
+                        <td>
+                            <button ng-click="removeContact(contact._id)" class="btn btn-danger">Remove</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

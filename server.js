@@ -48,7 +48,6 @@ app.get('/contactList', function(req, res) {
 
 app.post('/contact', function(req, res) {
   var newContact = req.body;
-  console.log(req.body);
   if (!(req.body.name)) {
     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
   }
@@ -61,6 +60,17 @@ app.post('/contact', function(req, res) {
     }
   });
 });
+
+app.delete("/contact/:id", function(req, res) {
+  db.collection(CONTACTS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
+    if (err) {
+      handleError(res, err.message, "Failed to delete contact");
+    } else {
+      res.status(204).end();
+    }
+  });
+});
+
 /*app.get('/contactList', function(req, res){
  person1 = {
         name: 'Tim',
