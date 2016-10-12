@@ -1,0 +1,12 @@
+.search-bar {
+    //background-color: rgba(0, 159, 139, 0.85);
+    padding: 20px 20px 40px 20px;
+    position: relative;
+    z-index: 10;
+}
+.bg-img{
+	background: url('../images/header-bg.jpg')
+}
+.container {
+	color: white;
+}
