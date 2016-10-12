@@ -9,49 +9,82 @@
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="controllers/mainController.js"></script>
 </head>
 
 <body>
-    <div class="wrapper" ng-controller="AppController">
+    <div class="wrapper bg-img" ng-controller="AppController">
         <div class="header text-center">
-            <h1>Contact List App</h1>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Contact List</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#List Contacts">List Contacts</a>
+                        </li>
+                        <li>
+                            <a href="#Add Contacts">Add Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div class="container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="text" class="form-control" ng-model="contact.name">
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" ng-model="contact.email">
-                        </td>
-                        <td>
-                            <input type="text" class="form-control" ng-model="contact.number">
-                        </td>
-                        <td>
-                            <button ng-click="addContact()" class="btn btn-primary">Add Contact</button>
-                        </td>
-                    </tr>
-                    <tr ng-repeat="contact in contactlist">
-                        <td class="hidden" data-id="{{contact._id}}"></td>
-                        <td>{{contact.name}}</td>
-                        <td>{{contact.email}}</td>
-                        <td>{{contact.number}}</td>
-                        <td>
-                            <button ng-click="removeContact(contact._id)" class="btn btn-danger">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="row">
+                <div class="search-bar" id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="search-query form-control" placeholder="Search" />
+                        <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+           <br>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" ng-model="contact.name">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="contact.email">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" ng-model="contact.number">
+                            </td>
+                            <td>
+                                <button ng-click="addContact()" class="btn btn-primary">Add Contact</button>
+                            </td>
+                        </tr>
+                        <tr ng-repeat="contact in contactlist">
+                            <td class="hidden" data-id="{{contact._id}}"></td>
+                            <td>{{contact.name}}</td>
+                            <td>{{contact.email}}</td>
+                            <td>{{contact.number}}</td>
+                            <td>
+                                <button ng-click="removeContact(contact._id)" class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
