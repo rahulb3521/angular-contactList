@@ -4,7 +4,8 @@
   "dependencies": {
     "express": "4.14.0",
     "mongodb" : "2.2",
-    "body-parser" : "1.15.2"
+    "body-parser" : "1.15.2",
+    "nodemon" : "1.11.0"
   },
   "description": "Create Updating Delete Contacts",
   "main": "server.js",

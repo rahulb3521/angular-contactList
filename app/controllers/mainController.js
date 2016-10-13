@@ -17,7 +17,7 @@ function AppController($scope, $http) {
             .success(
                 function(response) {
                     console.log(response);
-                    console.log('Contact added successfully');
+                    console.log('Contact added');
                     refresh();
                 },
                 function(response) {
