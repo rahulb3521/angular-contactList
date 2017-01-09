@@ -1,8 +1,10 @@
 {
-  "name": "angular-contactList",
+  "name": "angular-contactlist",
   "version": "1.0.0",
   "dependencies": {
-    "angular" : "1.2.28",
-	"bootstrap" : "3.3.7"
+    "angular" : "1.2.32",
+	"bootstrap" : "3.3.7",
+	"requirejs" : "2.3.2",
+	"angular-route": "1.2.32"
   }
 }

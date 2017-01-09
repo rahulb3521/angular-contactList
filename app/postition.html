@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Position related css properties | ME, CSS and Browser</title>
+  <meta name="description" content="Learn all the properties related to Position. You'll find examples for all the properties ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/07-position.css">
+
+  <!-- Fontface from google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Yanone+Kaffeesatz:300" rel="stylesheet"> 
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<!-- <body dir="rtl"> -->
+<!-- To change the direction of the text on th epage -->
+<body>
+<!--[if lt IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header class="site-header">
+  <div class="container">
+    <h1>
+      ME, CSS and Browser 
+      <small>with style</small>
+    </h1>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="01-type.html">Type</a></li>
+        <li><a href="02-block.html">Block</a></li>
+        <li><a href="03-list.html">List</a></li>
+        <li><a href="04-background.html">Background</a></li>
+        <li><a href="05-border.html">Border</a></li>
+        <li><a href="06-box.html">Box</a></li>
+        <li class="active"><a href="07-position.html">Position</a></li>
+        <li><a href="08-css3.html">CSS3</a></li>
+        <li><a href="09-animation.html">Animations</a></li>
+        <li><a href="10-layouts.html">Layouts</a></li>
+      </ul><!-- eo .main-menu -->
+    </nav>
+  </div><!-- eo conatiner -->
+</header><!-- /header -->
+
+<div class="conatiner">
+  <h1 class="page-heading">Position related properties</h1>
+
+</div><!-- eo conatiner -->
+
+<hr>
+
+<div class="posi-wrap">
+  <h2 class="posi-static-demo">position:static</h2>
+  <div class="posi-static-demo">I am div</div>
+  <p class="posi-static-demo">I am p</p>
+  <ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul>
+  <span>i am span</span>
+  <strong>i am strong</strong>
+</div>
+
+<hr>
+<hr>
+<div class="posi-wrap">
+  <h2>position:relative</h2>
+  <div class="posi-relative-demo">I am div</div>
+  <p>I am p</p>
+  <ul>
+    <li>1 list item</li>
+    <li class="pos-rel-demo">2 list item</li>
+    <li class="pos-re-zi-demo">3 list item</li>
+    <li>4 list item</li>
+  </ul>
+  <span class="pos-rel-demo">i am span</span>
+  <strong>i am strong</strong>
+</div>
+
+<hr>
+<hr>
+<div class="posi-wrap pos-rel">
+  <h2>position:absolute</h2>
+  <div>1 I am div</div>
+  <div>2 I am div</div>
+  <div class="posi-absolute-demo">3 I am div</div>
+  <div>4 I am div</div>
+  <p>I am p</p>
+  <ul>
+    <li>1 list item</li>
+    <li>2 list item</li>
+    <li>3 list item</li>
+    <li>4 list item</li>
+  </ul>
+  <span>1 i am span</span>
+  <span  class="posi-absolute-demo">2 i am span</span>
+  <span>3 i am span</span>
+  <span>4 i am span</span>
+  <strong>i am strong</strong>
+</div>
+
+<div class="banner">
+  <img src="img/students.jpg" alt="students">
+  <h2>The purpose of our lives is to be happy.</h2>
+</div>
+
+<hr>
+<hr>
+<hr>
+
+<div class="row">
+ <div class="col-one-half">
+   <p class="close">1 half</p>
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+
+
+ </div>
+ <div class="col-one-half">
+   <p>2 half</p>
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+
+
+ </div> 
+</div>
+
+<div class="row">
+  <div class="col-one-third">
+    <p>1 one/third</p>
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+  <div class="col-one-third">
+    <p>2 one/third</p>
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+  <div class="col-one-third">
+    <p>3 one/third</p>
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-one-fourth">
+    1 one/fourth
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+  <div class="col-one-fourth">
+    2 one/fourth
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+  <div class="col-one-fourth">
+    3 one/fourth
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+  <div class="col-one-fourth">
+    4 one/fourth
+   <div class="panel">
+     <div class="panel-header">
+       <h2>Panel Heading</h2>
+       <div class="close"></div>
+     </div><!-- eo panel-header -->
+     <div class="panel-content">
+       <div class="user-pic">
+         <a href="#"><img src="img/user-pic.jpg" alt="Austin Edwin Haro"></a>
+       </div><!-- eo user-pic -->
+       <div class="user-info">
+         <h3><a href="#">Austin Edwin Haro</a></h3>
+         <ul class="info-list">
+           <li>Bengaluru</li>
+           <li>Everything is energy and that's all there is to it. Match the freque...</li>
+           <li><a href="mailto:austin@gmail.com">austin@gmail.com</a></li>
+           <li><a href="tel:+919880439463">98804 39463</a></li>
+         </ul>
+       </div><!-- eo user-info -->
+     </div><!-- eo panel-content -->
+   </div><!-- eo panel -->
+  </div>
+</div>
+
+
+
+
+
+<footer class="site-footer">
+  <p>&copy; 2016 - all rights reserved, <a href="http://www.htmlden.com/">KriS' School of Web</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus amet odit quidem fugiat sed quod, consequuntur sapiente id ipsam omnis quam, ducimus excepturi quo laborum! Repellat, perspiciatis ex exercitationem inventore.</p>
+</footer><!-- /.site-footer -->
+
+
+</body>
+</html>

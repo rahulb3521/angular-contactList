@@ -1,0 +1,242 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+
+   ========================================================================== */
+/*
+
+Position related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+position: static | relative | absolute | sticky| fixed
+  Applies to all elements
+
+left, top, right, bottom
+  Applies to positioned elements
+
+z-index: auto | <integer>
+  Applies to positioned elements
+
+visibility: visible | hidden | collapse
+  Applies to all elements
+
+overflow: visible | hidden | scroll | auto
+overflow-x
+overflow-y
+
+auto;
+inherit;
+
+*/
+
+/* ==========================================================================
+   Demo of Position related properties
+   ========================================================================== */
+
+.posi-wrap{
+  border: solid 1px red;
+  background-color: wheat;
+  margin:25px auto;
+  width: 1000px;
+}
+.posi-wrap *{
+  border: dashed 1px green;
+}
+.posi-wrap h2{
+  border-bottom: double 3px red;
+  background-color: lightblue;
+  padding: 10px;
+  margin:0;
+  text-align: center;
+}
+
+.posi-static-demo{
+  position:static;
+  top:100px;
+  z-index:
+}
+
+.posi-relative-demo{
+  position:relative;
+  top:50px;
+  left:100px;
+}
+
+.pos-rel-demo{
+  position: relative;
+  bottom:30px;
+  top:30px;
+  right:40px;
+  left:40px;
+  width:50%;
+  background-color:rgba(255,0,0,.9);
+  z-index:2;
+}
+.pos-re-zi-demo{
+  position: relative;
+  z-index:1;
+  background-color:orange;
+}
+.posi-absolute-demo{
+  position: absolute;
+  background-color:rgba(255,0,0,1);
+
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:20%;
+  height:20%;
+  margin:auto;
+}
+
+div.posi-absolute-demo {
+  z-index:1;
+}
+
+.pos-rel{position: relative;}
+
+.banner{
+  border:solid 5px grey;
+  width:800px;
+  height:360px;
+  margin:25px auto;
+  overflow:hidden;
+  position: relative;
+}
+
+.banner h2{
+  position: absolute;
+  background-color:rgba(0,0,0,.75);
+  color: #FFF;
+  padding:20px;
+  margin:0;
+  font-weight:normal;
+  font-size:40px;
+  bottom:0;
+  right:0;
+  width:100%;
+  text-align: center;
+}
+
+/* 9740160080 - mallikarjun */
+
+.row{
+  border-bottom: dotted 1px grey;
+  margin-bottom: 25px;
+  padding:0 5px 25px;
+}
+.row:after{
+  content:"";
+  display:block;
+  clear: both;
+}
+.col-one-half{
+  width:50%;
+  float: left;
+}
+.col-one-third{
+  width:33.333%;
+  float: left;
+}
+.col-one-fourth{
+  width:25%;
+  float: left;
+}
+
+/*----------  Panel  ----------*/
+.panel{
+  background-color:#e7e7e7;
+  border: solid 1px #b0b0b0;
+  border-radius:10px;
+  margin:0 10px;
+}
+.panel-header{
+  border-radius:9px 9px 0 0;
+  margin-bottom:15px;
+  position: relative;
+  background: #a29aa8;
+  background: -moz-linear-gradient(top,  #a29aa8 0%, #6d6771 100%);
+  background: -webkit-linear-gradient(top,  #a29aa8 0%,#6d6771 100%);
+  background: linear-gradient(to bottom,  #a29aa8 0%,#6d6771 100%);
+}
+.panel-header:after,
+.panel-content:after{
+  content:"";
+  display:block;
+  clear: both;
+}
+.panel-header:before{
+  content:"";
+  width:16px;
+  height:16px;
+  position: absolute;
+  bottom:-8px;
+  left:20px;
+  transform:rotate(45deg);
+
+  background: #7c7581;
+  background: -moz-linear-gradient(left,  #7c7581 0%, #6d6771 100%);
+  background: -webkit-linear-gradient(left,  #7c7581 0%,#6d6771 100%);
+  background: linear-gradient(to right,  #7c7581 0%,#6d6771 100%);
+
+}
+.panel-header h2{
+  margin:0;
+  float: left;
+  padding-left: 15px;
+  line-height: 44px;
+  color:#FFF;
+  font-weight:normal;
+}
+.panel-header .close{
+  border-bottom: solid 1px #FFF;
+  border-right: solid 1px #FFF;
+  float: right;
+  margin: 16px 15px 0 0;
+  width:8px;
+  height:8px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.panel-content{
+  padding:0 10px 10px;
+}
+.user-pic{
+  float: left;
+  width:140px;
+  height:140px;
+}
+.user-pic a{
+  border:solid 1px #CCC;
+  background-color:#FFF;
+  padding:10px;
+  display: block;
+  transition:all 300ms ease-in;
+}
+.user-pic a:hover{
+  border-color:#d02727;
+  background-color:#dfcece;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.7);
+  box-shadow: 0 0 5px 1px rgba(0,0,0,.7);
+  border-radius:50%;
+  transform:rotate(360deg);
+}
+.user-pic a:hover img{
+  border-radius:50%;
+}
+.user-pic img{
+  width:100%;
+  height:auto;
+  display: block;
+  transition:all 300ms ease-in;
+}
+.user-info{
+  border: solid 1px red;
+  margin-left: 150px;
+}

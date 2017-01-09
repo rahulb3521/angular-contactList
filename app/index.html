@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="contactListApp">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contact List App</title>
-    <link rel="icon" type="img/ico" href="images/favicon.png">
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="icon" type="img/ico" href="images/contacts.png">
+    <!-- <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="controllers/mainController.js"></script>
 </head>
 
-<body>
-    <div class="wrapper bg-img" ng-controller="AppController">
+<body data-ng-controller="mainController">
+    <div class="wrapper bg-img">
         <div class="header text-center">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Contact List</a>
+                        <a class="navbar-brand" href="#">{{ title }} Contact List</a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="#Home">Home</a>
                         </li>
                         <li>
-                            <a href="#list-contacts">List Contacts</a>
+                            <a href="#List Contacts">List Contacts</a>
                         </li>
                         <li>
                             <a href="#Add Contacts">Add Contacts</a>
@@ -75,7 +74,6 @@
                         </tr>
                         <tr ng-repeat="contact in contactlist">
                             <td class="hidden" data-id="{{contact._id}}"></td>
-
                             <td>{{contact.name}}</td>
                             <td>{{contact.email}}</td>
                             <td>{{contact.number}}</td>
@@ -88,6 +86,8 @@
             </div>
         </div>
     </div>
+    <script data-main="require-config" src="bower_components/requirejs/require.js"></script>
 </body>
 
 </html>
+ 

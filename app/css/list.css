@@ -5,8 +5,7 @@
     z-index: 10;
 }
 .bg-img{
-	background: url('../images/header-bg.jpg')
+	/* background: url('../images/header-bg.jpg') */
+	color:black;
 }
-.container {
-	color: white;
-}
+.container {}
